@@ -13,31 +13,37 @@ For discover font names by group, please use nex code
 You can add only that font names, that you plan to use. Not nessesary add all.
 
 ```
+#define kANLightFontName @"OpenSans-Light"
+#define kANRegularFontName @"OpenSans"
+#define kANSemiboldFontName @"OpenSans-Semibold"
+```
+
+```
 //light fonts
- NSString* const kANUltraLightFontName = @"";
- NSString* const kANThinFontName = @"";
- NSString* const kANLightFontName = @"";
+kANUltraLightFontName = @"";
+kANThinFontName = @"";
+kANLightFontName = @"";
 
 //normal
- NSString* const kANRegularFontName = @"";
- NSString* const kANMediumFontName = @"";
+kANRegularFontName = @"";
+kANMediumFontName = @"";
 //bold
- NSString* const kANSemiboldFontName = @"";
- NSString* const kANBoldFontName = @"";
+kANSemiboldFontName = @"";
+kANBoldFontName = @"";
 //condensed
- NSString* const kANCondensedBlackFontName = @"";
- NSString* const kANCondensedBoldFontName = @"";
+kANCondensedBlackFontName = @"";
+kANCondensedBoldFontName = @"";
 
 //italic
 //light fonts
- NSString* const kANItalicUltraLightFontName = @"";
- NSString* const kANItalicThinFontName = @"";
- NSString* const kANItalicLightFontName = @"";
+kANItalicUltraLightFontName = @"";
+kANItalicThinFontName = @"";
+kANItalicLightFontName = @"";
 
 //normal
- NSString* const kANItalicRegularFontName = @"";
- NSString* const kANItalicMediumFontName = @"";
+kANItalicRegularFontName = @"";
+kANItalicMediumFontName = @"";
 //bold
- NSString* const kANItalicSemiboldFontName = @"";
- NSString* const kANItalicBoldFontName = @"";
+kANItalicSemiboldFontName = @"";
+kANItalicBoldFontName = @"";
 ```
