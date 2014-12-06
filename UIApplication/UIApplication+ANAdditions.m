@@ -66,7 +66,7 @@
     }
     else
     {
-        [CDErrorHandler handleInternalError:[CDError errorWithKey:kErrorAppCantCall]];
+//        [ handleInternalError:[CDError errorWithKey:kErrorAppCantCall]]; //TODO:
     }
 }
 
