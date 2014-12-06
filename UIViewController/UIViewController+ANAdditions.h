@@ -5,6 +5,8 @@
 //  Copyright (c) 2014 ANODA. All rights reserved.
 //
 
+#import "ANHelperFunctions.h"
+
 @interface UIViewController (ANAdditions)
 
 - (void)an_showAsModalInNavigationController;
