@@ -5,6 +5,23 @@
 //  Copyright (c) 2013 ANODA. All rights reserved.
 //
 
+static NSString* kANUltraLightFontName;
+static NSString* kANThinFontName;
+static NSString* kANLightFontName;
+static NSString* kANRegularFontName;
+static NSString* kANMediumFontName;
+static NSString* kANSemiboldFontName;
+static NSString* kANBoldFontName;
+static NSString* kANCondensedBlackFontName;
+static NSString* kANCondensedBoldFontName;
+static NSString* kANItalicUltraLightFontName;
+static NSString* kANItalicThinFontName;
+static NSString* kANItalicLightFontName;
+static NSString* kANItalicRegularFontName;
+static NSString* kANItalicMediumFontName;
+static NSString* kANItalicSemiboldFontName;
+static NSString* kANItalicBoldFontName;
+
 @interface UIFont (ANAdditions)
 
 + (UIFont *)an_ultraLightFontWithSize:(CGFloat)size;
