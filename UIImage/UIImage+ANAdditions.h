@@ -1,6 +1,5 @@
 //
-//  UIImage+Resizable.h
-//  CtrlDo
+//  UIImage+ANAdditions.h
 //
 //  Created by Oksana Kovalchuk on 9/8/13.
 //  Copyright (c) 2013 ANODA. All rights reserved.

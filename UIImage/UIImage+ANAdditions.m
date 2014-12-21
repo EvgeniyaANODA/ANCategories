@@ -1,6 +1,5 @@
 //
-//  UIImage+Resizable.m
-//  CtrlDo
+//  UIImage+ANAdditions.m
 //
 //  Created by Oksana Kovalchuk on 9/8/13.
 //  Copyright (c) 2013 ANODA. All rights reserved.
@@ -35,7 +34,7 @@
 
 + (UIImage*)an_imageWithColor:(UIColor *)color
 {
-    return [self imageWithColor:color withSize:CGSizeMake(1.0f, 1.0f)];
+    return [self an_imageWithColor:color withSize:CGSizeMake(1.0f, 1.0f)];
 }
 
 - (UIImage*)an_drawImage:(UIImage *)inputImage inRect:(CGRect)frame

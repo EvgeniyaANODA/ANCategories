@@ -24,6 +24,7 @@
     UIWindow* topWindow = [[UIApplication sharedApplication].windows firstObject];
     UIViewController *topController = topWindow.rootViewController;
     
+    //TODO: this while is dangerous.
     while (topController.presentedViewController) {
         topController = topController.presentedViewController;
     }
