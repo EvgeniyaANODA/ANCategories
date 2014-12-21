@@ -7,9 +7,9 @@ Pod::Spec.new do |spec|
   spec.summary  = 'Useful categories for iOS development'
   spec.source   = { :git => 'https://github.com/anodamobi/ANCategories.git', :tag => '1.0' }
 
-  spec.source_files = "NSArray/*.{h,m}", "NSDate/*.{h,m}", "UIApplication/*.{h,m}", "UIColor/*.{h,m}", "UIFont/*.{h,m}", "UIImage/*.{h,m}", "UIViewController/*.{h,m}"
+  spec.source_files = "NSArray/*.{h,m}", "NSDate/*.{h,m}", "UIApplication/*.{h,m}", "UIColor/*.{h,m}", "UIFont/*.{h,m}", "UIImage/*.{h,m}", "NSArray/*.{h,m}", "NSString/*.{h,m}", "RACCommand/*.{h,m}", "UIAlertView/*.{h,m}", "UIBarButtonItem/*.{h,m}", "UILabel/*.{h,m}", "UINavigationItem/*.{h,m}", "UIViewController/*.{h,m}"
 
-  spec.public_header_files = "NSArray/*.h", "NSDate/*.h", "UIApplication/*.h", "UIColor/*.h", "UIFont/*.h", "UIImage/*.h", "UIViewController/*.h"
+  spec.public_header_files = "NSArray/*.h", "NSDate/*.h", "UIApplication/*.h", "UIColor/*.h", "UIFont/*.h", "UIImage/*.h", "UIViewController/*.h, "NSArray/*.h, "NSString/*.h", "RACCommand/*.h", "UIAlertView/*.h", "UIBarButtonItem/*.h", "UILabel/*.h", "UINavigationItem/*.h
 
   spec.framework = "Foundation", "UIKit"
   spec.requires_arc = true
