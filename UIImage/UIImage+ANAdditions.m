@@ -1,14 +1,12 @@
 //
-//  UIImage+ANAdditions.m
+//  UIImage+Resizable.m
+//  CtrlDo
 //
 //  Created by Oksana Kovalchuk on 9/8/13.
 //  Copyright (c) 2013 ANODA. All rights reserved.
 //
 
 #import "UIImage+ANAdditions.h"
-#import <CoreText/CTLine.h>
-#import <CoreText/CTFont.h>
-#import <CoreText/CoreText.h>
 
 @implementation UIImage (ANAdditions)
 
@@ -24,7 +22,7 @@
 + (UIImage*)an_imageWithColor:(UIColor *)color withSize:(CGSize)size
 {
     CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
-    
+
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
     [color setFill];
     UIRectFill(rect);
@@ -35,12 +33,12 @@
     return image;
 }
 
-+ (UIImage *)an_imageWithColor:(UIColor *)color
++ (UIImage*)an_imageWithColor:(UIColor *)color
 {
-    return [self an_imageWithColor:color withSize:CGSizeMake(1.0f, 1.0f)];
+    return [self imageWithColor:color withSize:CGSizeMake(1.0f, 1.0f)];
 }
 
-- (UIImage *)an_drawImage:(UIImage *)inputImage inRect:(CGRect)frame
+- (UIImage*)an_drawImage:(UIImage *)inputImage inRect:(CGRect)frame
 {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
     [self drawInRect:CGRectMake(0.0, 0.0, self.size.width, self.size.height)];
@@ -50,7 +48,7 @@
     return newImage;
 }
 
-- (UIImage *)an_overlapWithBlack
+- (UIImage*)an_overlapWithBlack
 {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
     

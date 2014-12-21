@@ -7,17 +7,17 @@
 
 @interface UIApplication (ANAdditions)
 
-- (void)openURL:(NSURL*)url orAlternativeURL:(NSURL*)alternativeURL;
+- (void)an_openURL:(NSURL*)url orAlternativeURL:(NSURL*)alternativeURL;
 
 #pragma mark - Socials
 
-- (void)openVKPageForID:(NSString *)userID;
-- (void)openFbPageForID:(NSString*)userID;
-- (void)openLinkedinPageForID:(NSString*)userID;
-- (void)openGooglePlusPageForID:(NSString *)userID;
+- (void)an_openVKPageForID:(NSString *)userID;
+- (void)an_openFbPageForID:(NSString*)userID;
+- (void)an_openLinkedinPageForID:(NSString*)userID;
+- (void)an_openGooglePlusPageForID:(NSString *)userID;
 
 #pragma mark - Phone
 
-- (void)callToUser:(NSString*)number;
+- (void)an_callToUser:(NSString*)number;
 
 @end
