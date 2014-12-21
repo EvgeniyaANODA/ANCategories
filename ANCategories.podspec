@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   spec.dependency 'ANHelperFunctions', '~> 1.0'
+  spec.dependency 'ReactiveCocoa', '~> 2.4.2'
 
   spec.ios.deployment_target = '6.0'
 end
