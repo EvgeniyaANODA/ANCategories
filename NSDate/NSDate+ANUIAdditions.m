@@ -146,7 +146,7 @@ static NSDateFormatter* localDateFormatter;
     return result;
 }
 
-- (BOOL)cd_isDateInCurrentYear
+- (BOOL)an_isDateInCurrentYear
 {
     NSDate *now = [NSDate new];
     NSCalendar* calendar = [NSCalendar currentCalendar];
@@ -237,7 +237,7 @@ static NSDateFormatter* localDateFormatter;
 
 - (NSString*)an_listDateStringWithIgnoringCurrentYear
 {
-    if ([self cd_isDateInCurrentYear])
+    if ([self an_isDateInCurrentYear])
     {
         return [self an_stringFromDateWithFormat:@"d MMMM"];
     }
