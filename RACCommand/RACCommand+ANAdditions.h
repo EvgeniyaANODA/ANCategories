@@ -7,6 +7,7 @@
 //
 
 #import "RACCommand.h"
+#import "ANHelperFunctions.h"
 
 @interface RACCommand (ANAdditions)
 

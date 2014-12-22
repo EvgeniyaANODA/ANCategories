@@ -6,7 +6,10 @@
 //  Copyright (c) 2014 ANODA. All rights reserved.
 //
 
+#import "ANHelperFunctions.h"
+
 @class RACSignal;
+@class RACCommand;
 
 @interface UIAlertView (ANAdditions)
 
@@ -60,11 +63,11 @@
  *  @return RACCommand* for showing UIAlertView with predefines values
  */
 + (RACCommand*)an_localizedCommandAlertWithTitle:(NSString *)title
-                                      message:(NSString *)message
+                                      message:(NSString*)message
                                      okSignal:(RACSignal*)okSignal;
 
 
-+ (RACCommand*)an_localizedCommandAlertWithTitle:(NSString *)title
++ (RACCommand*)an_localizedCommandAlertWithTitle:(NSString*)title
                                       message:(NSString *)message
                                       okBlock:(ANCodeBlock)okBlock;
 

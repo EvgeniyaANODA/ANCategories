@@ -7,9 +7,7 @@
 //
 
 #import "UIAlertView+ANAdditions.h"
-#import "RACCommand.h"
-#import "RACEXTScope.h"
-#import "UIAlertView+RACSignalSupport.h"
+#import "ReactiveCocoa.h"
 
 @implementation UIAlertView (ANAdditions)
 

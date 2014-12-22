@@ -7,6 +7,8 @@
 
 #import "UINavigationItem+ANAdditions.h"
 #import "RACCommand+ANAdditions.h"
+#import "UIViewController+ANAdditions.h"
+#import "UIBarButtonItem+ANAdditions.h"
 
 static CGFloat const kNegativeSpacer = -6.5f;
 
