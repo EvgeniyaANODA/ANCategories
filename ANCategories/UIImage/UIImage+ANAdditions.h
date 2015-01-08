@@ -8,10 +8,13 @@
 @interface UIImage (ANAdditions)
 
 + (UIImage*)an_resizableImageWithName:(NSString*)imageName;
++ (UIImage*)an_resizableImageFromImage:(UIImage*)image;
 + (UIImage*)an_imageWithColor:(UIColor*)color withSize:(CGSize)size;
 + (UIImage*)an_imageWithColor:(UIColor*)color;
 
 - (UIImage*)an_drawImage:(UIImage *)inputImage inRect:(CGRect)frame;
 - (UIImage*)an_overlapWithBlack;
+
+- (UIImage*)an_correctScaleImage;
 
 @end

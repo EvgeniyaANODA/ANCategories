@@ -12,6 +12,11 @@
 + (UIImage *)an_resizableImageWithName:(NSString *)imageName
 {
     UIImage* image = [UIImage imageNamed:imageName];
+    return [self an_resizableImageFromImage:image];
+}
+
++ (UIImage *)an_resizableImageFromImage:(UIImage*)image
+{
     int vertical = (image.size.height - 1) / 2;
     int horizontal = (image.size.width - 1) / 2;
     image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(vertical, horizontal, vertical, horizontal)];
@@ -62,6 +67,17 @@
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
+}
+
+- (UIImage*)an_correctScaleImage
+{
+    CGFloat scale = [UIScreen mainScreen].scale;
+    if (self.scale != scale)
+    {
+        return [UIImage imageWithCGImage:[self CGImage] scale:scale orientation:UIImageOrientationUp];
+    }
+    return self;
+    
 }
 
 @end

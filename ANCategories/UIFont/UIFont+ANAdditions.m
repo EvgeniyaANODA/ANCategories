@@ -7,82 +7,97 @@
 
 #import "UIFont+ANAdditions.h"
 
+static NSMutableDictionary* kANFontNames;
+
 @implementation UIFont (ANAdditions)
 
-+ (UIFont *)an_ultraLightFontWithSize:(CGFloat)size
++ (void)addFontName:(NSString *)fontName forType:(ANFontType)type
 {
-    return [UIFont _fontWithName:kANUltraLightFontName size:size];
+    if (!kANFontNames)
+    {
+        kANFontNames = [NSMutableDictionary dictionary];
+    }
+    if (fontName)
+    {
+        [kANFontNames setObject:fontName forKey:@(type)];
+    }
 }
 
-+ (UIFont *)an_lightFontWithSize:(CGFloat)size
++ (UIFont*)an_ultraLightFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANLightFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeUltraLight size:size];
 }
 
-+ (UIFont *)an_regularFontWithSize:(CGFloat)size
++ (UIFont*)an_lightFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANRegularFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeLight size:size];
 }
 
-+ (UIFont *)an_meduimFontWithSize:(CGFloat)size
++ (UIFont*)an_regularFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANMediumFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeRegular size:size];
 }
 
-+ (UIFont *)an_semiboldFontWithSize:(CGFloat)size
++ (UIFont*)an_meduimFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANSemiboldFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeMedium size:size];
 }
 
-+ (UIFont *)an_boldFontWithSize:(CGFloat)size
++ (UIFont*)an_semiboldFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANBoldFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeSemibold size:size];
 }
 
-+ (UIFont *)an_condensedBlackFontWithSize:(CGFloat)size
++ (UIFont*)an_boldFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANCondensedBlackFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeBold size:size];
 }
 
-+ (UIFont *)an_condensedBoldFontWithSize:(CGFloat)size
++ (UIFont*)an_condensedBlackFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANCondensedBoldFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeCondensedBlack size:size];
+}
+
++ (UIFont*)an_condensedBoldFontWithSize:(CGFloat)size
+{
+    return [UIFont _fontWithType:ANFontTypeCondensedBold size:size];
 }
 
 #pragma mark - Italic
 
-+ (UIFont *)an_italicUltraLightFontWithSize:(CGFloat)size
++ (UIFont*)an_italicUltraLightFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANItalicUltraLightFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeUltraLightItalic size:size];
 }
 
-+ (UIFont *)an_italicLightFontWithSize:(CGFloat)size
++ (UIFont*)an_italicLightFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANItalicLightFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeLightItalic size:size];
 }
 
-+ (UIFont *)an_italicRegularFontWithSize:(CGFloat)size
++ (UIFont*)an_italicRegularFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANItalicRegularFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeRegularItalic size:size];
 }
 
-+ (UIFont *)an_italicMeduimFontWithSize:(CGFloat)size
++ (UIFont*)an_italicMeduimFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANItalicMediumFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeMediumItalic size:size];
 }
 
-+ (UIFont *)an_italicSemiboldFontWithSize:(CGFloat)size
++ (UIFont*)an_italicSemiboldFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANItalicSemiboldFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeSemiboldItalic size:size];
 }
 
-+ (UIFont *)an_italicBoldFontWithSize:(CGFloat)size
++ (UIFont*)an_italicBoldFontWithSize:(CGFloat)size
 {
-    return [UIFont _fontWithName:kANItalicBoldFontName size:size];
+    return [UIFont _fontWithType:ANFontTypeBoldItalic size:size];
 }
 
-+ (UIFont*)_fontWithName:(NSString *)fontName size:(CGFloat)fontSize
++ (UIFont*)_fontWithType:(ANFontType)type size:(CGFloat)fontSize
 {
+    NSString* fontName = kANFontNames[@(type)];
     UIFont* font = [UIFont fontWithName:fontName size:fontSize];
     if (!font)
     {

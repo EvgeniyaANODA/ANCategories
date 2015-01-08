@@ -5,24 +5,32 @@
 //  Copyright (c) 2013 ANODA. All rights reserved.
 //
 
-static NSString* kANUltraLightFontName;
-static NSString* kANThinFontName;
-static NSString* kANLightFontName;
-static NSString* kANRegularFontName;
-static NSString* kANMediumFontName;
-static NSString* kANSemiboldFontName;
-static NSString* kANBoldFontName;
-static NSString* kANCondensedBlackFontName;
-static NSString* kANCondensedBoldFontName;
-static NSString* kANItalicUltraLightFontName;
-static NSString* kANItalicThinFontName;
-static NSString* kANItalicLightFontName;
-static NSString* kANItalicRegularFontName;
-static NSString* kANItalicMediumFontName;
-static NSString* kANItalicSemiboldFontName;
-static NSString* kANItalicBoldFontName;
+typedef NS_ENUM (NSInteger, ANFontType)
+{
+    ANFontTypeUltraLight,
+    ANFontTypeLight,
+    ANFontTypeRegular,
+    ANFontTypeMedium,
+    ANFontTypeSemibold,
+    ANFontTypeBold,
+    ANFontTypeCondensedBlack,
+    ANFontTypeCondensedBold,
+    //italic
+    ANFontTypeUltraLightItalic,
+    ANFontTypeLightItalic,
+    ANFontTypeRegularItalic,
+    ANFontTypeMediumItalic,
+    ANFontTypeSemiboldItalic,
+    ANFontTypeBoldItalic
+};
 
 @interface UIFont (ANAdditions)
+
+#pragma mark - Configuring
+
++ (void)addFontName:(NSString*)fontName forType:(ANFontType)type;
+
+#pragma mark - Normal
 
 + (UIFont *)an_ultraLightFontWithSize:(CGFloat)size;
 + (UIFont *)an_lightFontWithSize:(CGFloat)size;
