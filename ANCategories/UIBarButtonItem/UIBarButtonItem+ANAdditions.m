@@ -24,7 +24,7 @@ static NSMutableDictionary* kImageNames;
 
 + (UIBarButtonItem *)an_itemWithType:(ANBarButtonType)type command:(RACCommand *)command
 {
-    ANProgressButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.exclusiveTouch = YES;
 //    UIImage* image = [UIImage imageNamed:imageNameByType(type)];
     UIImage* image = [self _imageNames][@(type)];
