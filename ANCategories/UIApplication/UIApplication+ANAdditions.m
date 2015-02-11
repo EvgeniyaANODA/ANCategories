@@ -51,6 +51,16 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
+- (void)an_openURLString:(NSString*)urlString
+{
+    NSURL* url;
+    if (urlString)
+    {
+        url = [NSURL URLWithString:urlString];
+    }
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 #pragma mark - Phone
 
 - (void)an_callToUser:(NSString*)number

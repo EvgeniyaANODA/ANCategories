@@ -42,6 +42,15 @@
     return [self an_imageWithColor:color withSize:CGSizeMake(1.0f, 1.0f)];
 }
 
+- (UIImage*)an_scaleToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return [newImage an_correctScaleImage];
+}
+
 - (UIImage*)an_drawImage:(UIImage *)inputImage inRect:(CGRect)frame
 {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
@@ -69,15 +78,20 @@
     return newImage;
 }
 
-- (UIImage*)an_correctScaleImage
+- (UIImage*)an_correctScaleImageWithOrientation:(UIImageOrientation)orientation
 {
     CGFloat scale = [UIScreen mainScreen].scale;
     if (self.scale != scale)
     {
-        return [UIImage imageWithCGImage:[self CGImage] scale:scale orientation:UIImageOrientationUp];
+        return [UIImage imageWithCGImage:[self CGImage] scale:scale orientation:orientation];
     }
     return self;
     
+}
+
+- (UIImage*)an_correctScaleImage
+{
+    return [self an_correctScaleImageWithOrientation:self.imageOrientation];
 }
 
 @end

@@ -15,6 +15,9 @@
 - (UIImage*)an_drawImage:(UIImage *)inputImage inRect:(CGRect)frame;
 - (UIImage*)an_overlapWithBlack;
 
+- (UIImage*)an_correctScaleImageWithOrientation:(UIImageOrientation)orientation;
 - (UIImage*)an_correctScaleImage;
+
+- (UIImage*)an_scaleToSize:(CGSize)size;
 
 @end

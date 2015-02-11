@@ -9,6 +9,7 @@
 #import "UIButton+RACCommandSupport.h"
 //#import "UIImage+PDF.h"
 #import "ANHelperFunctions.h"
+#import "ANProgressButton.h"
 
 static NSMutableDictionary* kImageNames;
 
@@ -24,7 +25,7 @@ static NSMutableDictionary* kImageNames;
 
 + (UIBarButtonItem *)an_itemWithType:(ANBarButtonType)type command:(RACCommand *)command
 {
-    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    ANProgressButton* button = [ANProgressButton buttonWithType:UIButtonTypeCustom];
     button.exclusiveTouch = YES;
 //    UIImage* image = [UIImage imageNamed:imageNameByType(type)];
     UIImage* image = [self _imageNames][@(type)];

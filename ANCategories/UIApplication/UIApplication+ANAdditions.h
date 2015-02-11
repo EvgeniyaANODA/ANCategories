@@ -8,6 +8,7 @@
 @interface UIApplication (ANAdditions)
 
 - (void)an_openURL:(NSURL*)url orAlternativeURL:(NSURL*)alternativeURL;
+- (void)an_openURLString:(NSString*)urlString;
 
 #pragma mark - Socials
 

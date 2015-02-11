@@ -1,6 +1,6 @@
 //
 //  NSString+Validation.h
-//  CtrlDo
+//  ShipMate
 //
 //  Created by Oksana Kovalchuk on 2/6/14.
 //  Copyright (c) 2014 ANODA. All rights reserved.

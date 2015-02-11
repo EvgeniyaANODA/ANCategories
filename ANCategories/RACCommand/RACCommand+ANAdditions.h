@@ -1,6 +1,6 @@
 //
 //  RACCommand+ANAdditions.h
-//  CtrlDo
+//  ShipMate
 //
 //  Created by Oksana Kovalchuk on 6/7/14.
 //  Copyright (c) 2014 ANODA. All rights reserved.
