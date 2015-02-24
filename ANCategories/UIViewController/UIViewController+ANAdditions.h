@@ -14,4 +14,6 @@
 - (void)an_dismissAsModal;
 - (void)an_dismissAsModalWithCompletion:(ANCodeBlock)completion;
 
+- (BOOL)an_isModal;
+
 @end

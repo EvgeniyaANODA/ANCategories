@@ -29,7 +29,7 @@ static NSMutableDictionary* kImageNames;
 //    UIImage* image = [UIImage imageNamed:imageNameByType(type)];
     UIImage* image = [self _imageNames][@(type)];
     CGRect frame = button.frame;
-    frame.size = image.size;
+    frame.size = CGSizeMake(40, 40);
     button.frame = frame;
     [button setImage:image forState:UIControlStateNormal];
     button.rac_command = command;

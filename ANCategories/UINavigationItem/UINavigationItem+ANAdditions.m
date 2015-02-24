@@ -17,7 +17,6 @@ static CGFloat const kNegativeSpacer = -6.5f;
 - (void)an_addCloseButtonItemWithModalVC:(UIViewController*)vc
 {
     RACCommand *closeVC = [RACCommand commandWithBlock:^{
-        
         [vc an_dismissAsModal];
     }];
     UIBarButtonItem* close = [UIBarButtonItem an_itemWithType:ANBarButtonTypeClose command:closeVC];

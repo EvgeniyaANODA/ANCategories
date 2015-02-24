@@ -19,5 +19,6 @@
 - (UIImage*)an_correctScaleImage;
 
 - (UIImage*)an_scaleToSize:(CGSize)size;
+- (UIImage*)an_imageByTintingWithColor:(UIColor*)color;
 
 @end
