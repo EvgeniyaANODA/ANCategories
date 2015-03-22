@@ -17,15 +17,16 @@ typedef NS_ENUM(NSUInteger, ANBarButtonType) {
     ANBarButtonTypeNext,
     ANBarButtonTypeSearch,
     ANBarButtonTypeMore,
-    ANBarButtonTypeSettings
+    ANBarButtonTypeSettings,
+    ANBarButtonTypeShare
 };
 
 @class RACCommand;
 
 @interface UIBarButtonItem (ANAdditions)
 
-+ (UIBarButtonItem*)an_itemWithType:(ANBarButtonType)type command:(RACCommand*)command;
++ (void)an_addImage:(UIImage*)image forType:(ANBarButtonType)type;
 
-+ (void)an_addImageName:(NSString*)imageName forType:(ANBarButtonType)type;
++ (UIBarButtonItem*)an_itemWithType:(ANBarButtonType)type command:(RACCommand*)command;
 
 @end

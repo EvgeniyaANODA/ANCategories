@@ -10,7 +10,7 @@
 #import "UIViewController+ANAdditions.h"
 #import "UIBarButtonItem+ANAdditions.h"
 
-static CGFloat const kNegativeSpacer = -6.5f;
+static CGFloat const kNegativeSpacer = -11;
 
 @implementation UINavigationItem (ANAdditions)
 

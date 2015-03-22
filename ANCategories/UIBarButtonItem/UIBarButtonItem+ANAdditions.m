@@ -7,30 +7,33 @@
 
 #import "UIBarButtonItem+ANAdditions.h"
 #import "UIButton+RACCommandSupport.h"
-//#import "UIImage+PDF.h"
 #import "ANHelperFunctions.h"
 
 static NSMutableDictionary* kImageNames;
 
 @implementation UIBarButtonItem (ANAdditions)
 
-+ (void)an_addImageName:(NSString*)imageName forType:(ANBarButtonType)type
++ (void)an_addImage:(UIImage*)image forType:(ANBarButtonType)type
 {
-    if (!ANIsEmpty(imageName))
+    if (!ANIsEmpty(image))
     {
-        [self _imageNames][@(type)] = imageName;
+        [self _imageNames][@(type)] = image;
     }
 }
 
 + (UIBarButtonItem *)an_itemWithType:(ANBarButtonType)type command:(RACCommand *)command
 {
     UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button.backgroundColor = [UIColor redColor];
+//    button.contentMode = UIViewContentModeScaleAspectFit;
     button.exclusiveTouch = YES;
-//    UIImage* image = [UIImage imageNamed:imageNameByType(type)];
     UIImage* image = [self _imageNames][@(type)];
+    
     CGRect frame = button.frame;
-    frame.size = CGSizeMake(40, 40);
+    frame.size.height = image.size.height;
+    frame.size.width = MAX(20, frame.size.width);
     button.frame = frame;
+    
     [button setImage:image forState:UIControlStateNormal];
     button.rac_command = command;
     return [[UIBarButtonItem alloc] initWithCustomView:button];

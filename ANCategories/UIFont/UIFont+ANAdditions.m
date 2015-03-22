@@ -11,7 +11,7 @@ static NSMutableDictionary* kANFontNames;
 
 @implementation UIFont (ANAdditions)
 
-+ (void)addFontName:(NSString *)fontName forType:(ANFontType)type
++ (void)an_addFontName:(NSString *)fontName forType:(ANFontType)type
 {
     if (!kANFontNames)
     {

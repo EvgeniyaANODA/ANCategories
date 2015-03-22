@@ -28,7 +28,7 @@ typedef NS_ENUM (NSInteger, ANFontType)
 
 #pragma mark - Configuring
 
-+ (void)addFontName:(NSString*)fontName forType:(ANFontType)type;
++ (void)an_addFontName:(NSString*)fontName forType:(ANFontType)type;
 
 #pragma mark - Normal
 
